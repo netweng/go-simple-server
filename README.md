@@ -1,0 +1,1 @@
+pratice project for go server
