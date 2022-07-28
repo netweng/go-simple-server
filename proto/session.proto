@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+// Web exposes a backend server over gRPC.
+package session;
+
+option go_package = "github.com/netweng/go-simple-server/proto/session";
+
+// Backend defines the interface exposed by the backend.
+service GoServer {
+    rpc GetCat(GetCatRequest) returns(Cat){}
+}
+
+message GetCatRequest {}
+
+message Cat {
+    string name = 1;
+    string age = 2;
+}
